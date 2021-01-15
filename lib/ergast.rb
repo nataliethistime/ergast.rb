@@ -1,11 +1,8 @@
 require_relative 'call'
+require_relative 'command'
 
 class Ergast
-  def initialize
-    @call_count = 0
-  end
-
-  def race_results(options)
-    Call.new('results', **options).fetch
+  def self.f1
+    Command.new(['f1'])
   end
 end
